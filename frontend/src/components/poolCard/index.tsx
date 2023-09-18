@@ -5,6 +5,8 @@ import { Pool } from '../../types'
 import zeniq from '../../assets/coins/zeniq.png'
 import weth from '../../assets/coins/weth.png'
 
+import eye from '../../assets/eye.svg'
+
 type Props = {
   data: Pool
 }
@@ -53,6 +55,9 @@ const PoolCard: FC<Props> = ({ data }: Props) => {
       </div>
 
       <div className={styles.button}>See analytics</div>
+      <div className={styles.buttonIcon}>
+        <img src={eye} alt="" />
+      </div>
     </div>
   )
 }

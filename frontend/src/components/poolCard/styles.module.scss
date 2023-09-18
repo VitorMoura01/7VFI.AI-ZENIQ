@@ -8,6 +8,7 @@
   .wrapper {
     display: flex;
     width: 60%;
+    min-width: 220px;
     justify-content: space-between;
 
     .col {
@@ -61,4 +62,62 @@
     }
   }
 
+  .buttonIcon {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .card {
+    padding: 24px;
+    // .wrapper {
+    //   .col {
+    //     .title {
+    //       font-size: 12px;
+    //     }
+
+    //     .icon {
+    //       width: 18px;
+    //       height: 18px;
+    //     }
+
+    //     .data {
+    //       font-size: 14px;
+    //     }
+    //   }
+    // }
+
+    .button {
+      display: none;
+    }
+
+    .buttonIcon {
+      display: flex;
+      margin-left: auto;
+      margin-right: 0;
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    .wrapper {
+      .col {
+        .title {
+          font-size: 12px;
+        }
+
+        .icon {
+          width: 18px;
+          height: 18px;
+        }
+
+        .data {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }

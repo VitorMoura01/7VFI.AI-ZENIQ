@@ -9,8 +9,10 @@ const Header: FC = () => {
 
   const connectWallet = async (wallet: string) => {
     if (wallet == 'metamask') {
-      const response = await web3Service.connectMetamask()
-      setAccount(response[0])
+      const response: any = await web3Service.connectMetamask()
+      if (response) {
+        setAccount(response[0])
+      }
     }
   }
 
