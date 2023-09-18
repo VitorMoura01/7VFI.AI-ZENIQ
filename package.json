@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "web3": "^4.1.1"
+  },
+  "devDependencies": {
+    "@types/web3": "^1.2.2"
+  }
+}
