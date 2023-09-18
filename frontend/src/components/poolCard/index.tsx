@@ -26,8 +26,8 @@ const PoolCard: FC<Props> = ({ data }: Props) => {
         <div className={styles.col}>
           <div className={styles.pairs}>
             {
-              data.pairs.map((coin) => (
-                <img src={getImage(coin)} alt="" className={styles.icon} />
+              data.pairs.map((coin: string, index: number) => (
+                <img src={getImage(coin)} alt="" className={styles.icon} key={index} />
               ))
             }
             <div className={styles.col}>
@@ -52,7 +52,7 @@ const PoolCard: FC<Props> = ({ data }: Props) => {
         </div>
       </div>
 
-      <div className={styles.button}>See analitics</div>
+      <div className={styles.button}>See analytics</div>
     </div>
   )
 }
