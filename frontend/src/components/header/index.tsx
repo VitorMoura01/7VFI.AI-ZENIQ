@@ -42,14 +42,6 @@ const Header: FC = () => {
     window.ethereum?.on('accountsChanged', accountWasChanged);
     window.ethereum?.on('connect', getAndsetAccount);
     window.ethereum?.on('disconnect', clearAccount);
-    // No need to set account here, it will be set by the event listener
-
-    // return () => {
-    //   // Return function of a non-async useEffect will clean up on component leaving screen, or from re-reneder to due dependency change
-    // window.ethereum?.off('accountsChanged', accountWasChanged);
-    // window.ethereum?.off('disconnect', clearAccount);
-    // }
-    console.log(account)
   }, [])
 
   return (

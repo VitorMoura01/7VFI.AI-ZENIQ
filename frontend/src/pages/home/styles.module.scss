@@ -24,7 +24,7 @@
 
   .divider {
     width: 90%;
-    max-width: 964px;
+    max-width: 1024px;
     margin: auto;
     margin-top: 32px;
     height: 1px;
@@ -38,7 +38,7 @@
     margin: 32px 0;
 
     .col {
-      min-width: 60%;
+      min-width: 63%;
       display: flex;
       flex-direction: column;
       gap: 32px;
@@ -50,7 +50,8 @@
       align-items: center;
       text-align: center;
       flex: 1;
-      margin: 0 32px;
+      margin: 0;
+      margin-left: 32px;
       padding-bottom: 40px;
       height: fit-content;
       background-color: #1A1A1A;
@@ -110,6 +111,7 @@
     h1 {
       font-size: 30px !important;
     }
+
     p {
       font-size: 18px !important;
     }
@@ -124,7 +126,6 @@
     }
 
     .card {
-
       .total {
         font-size: 16px !important;
       }
