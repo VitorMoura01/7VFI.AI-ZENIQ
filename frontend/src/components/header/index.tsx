@@ -50,7 +50,7 @@ const Header: FC = () => {
         <img src={LOGO} alt="" />
       </div>
       <Link to='/'>
-        Portfólio
+        Portfolio
       </Link>
       <Link to='/'>
         Trade
