@@ -10,7 +10,7 @@ const Header: FC = () => {
         <img src={LOGO} alt="" />
       </div>
       <Link to='/'>
-        Portfólio
+        Portfolio
       </Link>
       <Link to='/'>
         Trade
@@ -18,10 +18,6 @@ const Header: FC = () => {
       <Link className={styles.active} to='/'>
         Earn
       </Link>
-
-      <button className={styles.button}>
-        Connect wallet
-      </button>
     </div>
   )
 }

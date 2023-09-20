@@ -8,6 +8,7 @@
   .wrapper {
     display: flex;
     width: 60%;
+    min-width: 220px;
     justify-content: space-between;
 
     .col {
@@ -39,8 +40,8 @@
         font-size: 22px;
       }
 
-      .apy {
-        color: #33C854;
+      .volume {
+        // color: #33C854;
       }
 
       p {
@@ -61,4 +62,76 @@
     }
   }
 
+  .buttonIcon {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .card {
+    padding: 24px;
+    // .wrapper {
+    //   .col {
+    //     .title {
+    //       font-size: 12px;
+    //     }
+
+    //     .icon {
+    //       width: 18px;
+    //       height: 18px;
+    //     }
+
+    //     .data {
+    //       font-size: 14px;
+    //     }
+    //   }
+    // }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    padding: 16px 12px;
+
+    .wrapper {
+      width: 65%;
+
+      .col {
+        .title {
+          font-size: 8px;
+        }
+
+        .icon {
+          width: 18px;
+          height: 18px;
+        }
+
+        .data {
+          font-size: 10px;
+        }
+      }
+    }
+
+    .button {
+      display: none;
+    }
+
+    .buttonIcon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: auto;
+      margin-right: 0;
+      width: fit-content;
+      font-size: 10px;
+      text-align: center;
+      gap: 4px;
+      padding: 4px;
+
+      img {
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
 }

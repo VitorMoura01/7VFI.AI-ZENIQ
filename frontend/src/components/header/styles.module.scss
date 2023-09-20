@@ -40,4 +40,39 @@
       linear-gradient(#D0C2E5, #643BEB, #6B4FD9, #E1E0E5) border-box;
     cursor: pointer;
   }
+
+  .connected {
+    margin-left: auto;
+    margin-right: 32px;
+  }
 }
+
+@media only screen and (max-width: 1280px) {
+  .header {
+    font-size: 12px;
+    gap: 16px;
+
+    .logo {
+      margin-left: 24px;
+
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    .button {
+      font-size: 10px;
+      padding: 4px 8px;
+      margin-right: 16px;
+    }
+  }
+}
+
+// @media screen and (max-width: 400px) {
+//   .header {
+//     // .button {
+//       margin-right: 16px;
+//     // }
+//   }
+// }
