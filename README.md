@@ -12,7 +12,13 @@ Analisando a ZENIQ no mercado e visando uma maior liquidez, dedicamos este proje
 
 # DEMO 
 https://youtube.com/shorts/M7POsiPGu9Y?feature=share
- 
+
+# Plugin acess
+https://nomo.app/pluginv1/650aed5d14afff53be3abb6a--tangerine-bienenstitch-0a3b73.netlify.app/
+
+or scan this to acess : 
+ <img src="https://github.com/VitorMoura01/7VFI.AI-ZENIQ/blob/main/images/d311800f-ef20-42bc-9aa8-470eed271ae7.jfif" alt="Inteli - " border="0"></a>
+
 # Members
 
 * [Alex Nascimento](https://www.linkedin.com/in/nascimentoalex/)
