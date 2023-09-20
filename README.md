@@ -9,6 +9,9 @@ Analisando a ZENIQ no mercado e visando uma maior liquidez, dedicamos este proje
 # Work Flow
 
 <img src="https://github.com/VitorMoura01/7VFI.AI-ZENIQ/blob/main/images/7vfi.ai%20workflow.png" alt="Inteli - " border="0"></a>
+
+# DEMO 
+https://youtube.com/shorts/M7POsiPGu9Y?feature=share
  
 # Members
 
