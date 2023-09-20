@@ -10,4 +10,10 @@ Analisando a ZENIQ no mercado e visando uma maior liquidez, dedicamos este proje
 
 <img src="https://github.com/VitorMoura01/7VFI.AI-ZENIQ/blob/main/images/7vfi.ai%20workflow.png" alt="Inteli - " border="0"></a>
  
+# Members
 
+* [Alex Nascimento](https://www.linkedin.com/in/nascimentoalex/)
+* [Gustavo Torrecilha](https://www.linkedin.com/in/gustavo-torrecilha/) 
+* [Felipe Saadi](https://www.linkedin.com/in/felipe-saadi/)
+* [Matheus Fidelis](https://www.linkedin.com/in/matheus-fidelis-dos-santos-pinto-680520232/)
+* [Vitor Moura](https://www.linkedin.com/in/vitor-moura-de-oliveira/)
