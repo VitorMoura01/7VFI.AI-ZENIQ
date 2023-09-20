@@ -7,10 +7,11 @@ import usdc from '../../assets/coins/usdc.png'
 import lp from '../../assets/arrow-2.svg'
 
 type Props = {
-  data: any
+  data: any,
+  openModal: () => void
 }
 
-const PoolCard: FC<Props> = ({ data }: Props) => {
+const PoolCard: FC<Props> = ({ data, openModal }: Props) => {
   const getImage = (coin: string) => {
     if (coin == 'ZENIQ') {
       return zeniq
@@ -78,8 +79,8 @@ const PoolCard: FC<Props> = ({ data }: Props) => {
         </div>
       </div>
 
-      <div className={styles.button}>Create LP Position</div>
-      <div className={styles.buttonIcon}>
+      <div className={styles.button} onClick={() => openModal()}>Create LP Position</div>
+      <div className={styles.buttonIcon} onClick={() => openModal()}>
         New position
         <img src={lp} alt="" />
       </div>

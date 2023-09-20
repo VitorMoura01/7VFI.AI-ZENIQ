@@ -86,6 +86,31 @@
     //     }
     //   }
     // }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    padding: 16px;
+
+    .wrapper {
+      width: 65%;
+
+      .col {
+        .title {
+          font-size: 10px;
+        }
+
+        .icon {
+          width: 18px;
+          height: 18px;
+        }
+
+        .data {
+          font-size: 12px;
+        }
+      }
+    }
 
     .button {
       display: none;
@@ -100,33 +125,12 @@
       width: fit-content;
       font-size: 10px;
       text-align: center;
+      gap: 4px;
+      padding: 4px;
 
       img {
         width: 8px;
         height: 8px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .card {
-    padding: 16px;
-    .wrapper {
-      width: 65%;
-      .col {
-        .title {
-          font-size: 10px;
-        }
-
-        .icon {
-          width: 18px;
-          height: 18px;
-        }
-
-        .data {
-          font-size: 12px;
-        }
       }
     }
   }

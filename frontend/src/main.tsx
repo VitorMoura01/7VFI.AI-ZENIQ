@@ -21,9 +21,7 @@ export const client = new ApolloClient({
 })
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
     <ApolloProvider client={client}>
       <Router />
     </ApolloProvider>
-  </React.StrictMode>,
 )

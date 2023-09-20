@@ -1,0 +1,126 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000080;
+  position: fixed;
+  overflow: hidden;
+  z-index: 1;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    width: 600px;
+    height: 400px;
+    background: #1A1A1A;
+    border-radius: 20px;
+    padding: 32px;
+    gap: 32px;
+
+    .divider {
+      width: 90%;
+      max-width: 800px;
+      margin: auto;
+      margin-top: 32px;
+      height: 1px;
+      background-color: #42424290;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      .col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+
+        p {
+          padding: 0;
+          margin: 0;
+        }
+
+        input {
+          text-align: center;
+          height: 32px;
+          border-radius: 20px;
+          border: solid 2px #f4f4f4;
+          color: #f4f4f4;
+          font-weight: bold;
+          font-size: 16px;
+          background-color: #4a4a4a;
+          padding: 8px 16px;
+        }
+      }
+    }
+
+    .buttons {
+      margin-top: auto;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      gap: 64px;
+
+      justify-self: flex-end;
+
+      button {
+        min-width: 120px;
+        margin-right: 16px;
+        padding: 8px 16px;
+        height: 40px;
+        border-radius: 20px;
+        border: solid 1px black;
+        font-weight: bold;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      .mint {
+        background-color: #5454dd;
+        color: #f4f4f4;
+      }
+
+      .cancel {
+        background-color: #f4f4f4DD;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    .container {
+      width: 80%;
+      padding: 32px 16px;
+
+      input {
+        width: 80px;
+        padding: 4px 8px !important;
+      }
+
+
+      .buttons {
+        min-width: 100px !important;
+        gap: 32px;
+
+        button {
+          margin-right: 0 !important;
+        }
+
+        .mint,
+        .cancel {
+          padding: 4px 8px;
+          font-size: 12px !important;
+        }
+      }
+
+    }
+  }
+}

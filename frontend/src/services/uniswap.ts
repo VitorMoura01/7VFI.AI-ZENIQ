@@ -1,39 +1,59 @@
-import { useQuery, gql } from "@apollo/client";
+import { gql } from "@apollo/client";
 
 const uniswapService = {
-  getPools: async (addresses: string[]) => {
-    const pools: any = [];
+  getQuery: (addresses: string[]) => {
 
     // addresses.map((address: string) => {
     const query = gql`
       {
         token(id: "0x5b52bfb8062ce664d74bbcd4cd6dc7df53fd7233") {
           name
-          whitelistPools (orderBy: liquidity, orderDirection: desc) {
-            id,
-            token0 {id, symbol, decimals, txCount, volume, totalSupply, tokenDayData (orderBy: date, orderDirection: desc, first: 1) {low, high, open, close, date}},
-            token1 { id, symbol, decimals,  txCount, volume, totalSupply, tokenDayData (orderBy: date, orderDirection: desc, first: 1) {low, high, open, close, date}},
-            liquidity,
-            feeTier,
-            token0Price,
-            token1Price,
-            sqrtPrice,
-            liquidity,
-            totalValueLockedToken0,
-            totalValueLockedToken1,
-            
+          whitelistPools(orderBy: liquidity, orderDirection: desc) {
+            id
+            token0 {
+              id
+              symbol
+              decimals
+              txCount
+              volume
+              totalSupply
+              tokenDayData(orderBy: date, orderDirection: desc, first: 1) {
+                low
+                high
+                open
+                close
+                date
+              }
+            }
+            token1 {
+              id
+              symbol
+              decimals
+              txCount
+              volume
+              totalSupply
+              tokenDayData(orderBy: date, orderDirection: desc, first: 1) {
+                low
+                high
+                open
+                close
+                date
+              }
+            }
+            liquidity
+            feeTier
+            token0Price
+            token1Price
+            sqrtPrice
+            liquidity
+            totalValueLockedToken0
+            totalValueLockedToken1
           }
         }
       }
     `;
 
-    const {
-      loading: loadingPool,
-      error: loadingError,
-      data: poolData,
-    } = useQuery(query);
-
-    return poolData;
+    return query
   },
 };
 
