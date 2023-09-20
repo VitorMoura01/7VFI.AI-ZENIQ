@@ -9,6 +9,22 @@
   overflow: hidden;
   z-index: 1;
 
+  .success {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    position: fixed;
+
+    svg {
+      width: 124px !important;
+      height: 124px !important;
+    }
+  }
+
   .container {
     display: flex;
     flex-direction: column;

@@ -1,5 +1,8 @@
 import { FC, useEffect, useState } from 'react'
 import styles from './styles.module.scss'
+import Loading from '../loading'
+import { Player } from '@lottiefiles/react-lottie-player';
+import success from '../../assets/success.json'
 
 type Props = {
   data: any,
@@ -7,6 +10,8 @@ type Props = {
 }
 
 const Modal: FC<Props> = ({ data, cancel }: Props) => {
+  const [loading, setLoading] = useState(false)
+  const [play, setPlay] = useState(false)
   const [lowest, setLowest] = useState(0)
   const [high, setHigh] = useState(0)
   const [token0, setToken0] = useState(0)
@@ -29,8 +34,29 @@ const Modal: FC<Props> = ({ data, cancel }: Props) => {
     setHigh(calc('biggest'))
   }, [])
 
+  const playAnimation = () => {
+    setPlay(true)
+    setTimeout(() => {
+      setPlay(false)
+    }, 1800)
+  }
+
+  const mintPosition = () => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+      playAnimation()
+    }, 800)
+  }
+
   return (
     <div className={styles.modal}>
+      {
+        loading && <Loading/>
+      }
+      {
+        play && <Player src={success} autoplay={true} className={`player ${styles.success}`}/>
+      }
       <div className={styles.container}>
         <div className={styles.row}>
           <div className={styles.col}>
@@ -49,17 +75,17 @@ const Modal: FC<Props> = ({ data, cancel }: Props) => {
 
         <div className={styles.row}>
           <div className={styles.col}>
-            <input type="number" value={token0} onChange={(e) => setToken0(Number(e.target.value))} />
+            <input type="number" value={token0 > 0 && token0} onChange={(e) => setToken0(Number(e.target.value))} />
             <p>Deposit of {data.token0.symbol}</p>
           </div>
           <div className={styles.col}>
-            <input type="number" value={token1} onChange={(e) => setToken1(Number(e.target.value))} />
+            <input type="number" value={token1 > 0 && token1} onChange={(e) => setToken1(Number(e.target.value))} />
             <p>Deposit of {data.token1.symbol}</p>
           </div>
         </div>
 
         <div className={styles.buttons}>
-          <button className={styles.mint}>Create Position</button>
+          <button className={styles.mint} onClick={() => mintPosition()}>Create Position</button>
           <button className={styles.cancel} onClick={() => cancel()}>Cancelar</button>
         </div>
       </div>
