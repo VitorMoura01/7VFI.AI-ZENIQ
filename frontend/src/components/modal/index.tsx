@@ -47,7 +47,7 @@ const Modal: FC<Props> = ({ data, cancel }: Props) => {
     setTimeout(() => {
       setLoading(false)
       playAnimation()
-    }, 800)
+    }, 3000)
   }
 
   const getPrices = (type: string, price: number) => {

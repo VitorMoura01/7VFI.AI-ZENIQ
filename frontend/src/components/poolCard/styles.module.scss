@@ -91,14 +91,14 @@
 
 @media screen and (max-width: 768px) {
   .card {
-    padding: 16px;
+    padding: 16px 12px;
 
     .wrapper {
       width: 65%;
 
       .col {
         .title {
-          font-size: 10px;
+          font-size: 8px;
         }
 
         .icon {
@@ -107,7 +107,7 @@
         }
 
         .data {
-          font-size: 12px;
+          font-size: 10px;
         }
       }
     }

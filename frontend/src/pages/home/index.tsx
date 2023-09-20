@@ -58,7 +58,7 @@ const Home: FC = () => {
 
       <div className={styles.title}>
         <h1>Pools</h1>
-        <p>Stake ZENIQ to earn rewards</p>
+        <p>Choose from a variety of pools across various networks and DEXs</p>
       </div>
 
       <div className={styles.divider} />
