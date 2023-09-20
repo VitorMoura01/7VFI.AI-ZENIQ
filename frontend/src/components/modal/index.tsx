@@ -87,11 +87,11 @@ const Modal: FC<Props> = ({ data, cancel }: Props) => {
         <div className={styles.row}>
           <div className={styles.col}>
             <input type="number" value={token1.toFixed(0)} onChange={(e) => getPrices('token1', Number(e.target.value))} />
-            <p>Deposit of {data.token1.symbol}</p>
+            <p>Deposit {data.token1.symbol}</p>
           </div>
           <div className={styles.col}>
             <input type="number" value={token0.toFixed(0)} onChange={(e) => getPrices('token0', Number(e.target.value))} />
-            <p>Deposit of {data.token0.symbol}</p>
+            <p>Deposit {data.token0.symbol}</p>
           </div>
         </div>
 
