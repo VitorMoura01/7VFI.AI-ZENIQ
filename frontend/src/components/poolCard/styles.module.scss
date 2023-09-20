@@ -40,8 +40,8 @@
         font-size: 22px;
       }
 
-      .apy {
-        color: #33C854;
+      .volume {
+        // color: #33C854;
       }
 
       p {
@@ -93,20 +93,30 @@
 
     .buttonIcon {
       display: flex;
+      justify-content: center;
+      align-items: center;
       margin-left: auto;
       margin-right: 0;
-      width: 16px;
-      height: 16px;
+      width: fit-content;
+      font-size: 10px;
+      text-align: center;
+
+      img {
+        width: 8px;
+        height: 8px;
+      }
     }
   }
 }
 
 @media screen and (max-width: 768px) {
   .card {
+    padding: 16px;
     .wrapper {
+      width: 65%;
       .col {
         .title {
-          font-size: 12px;
+          font-size: 10px;
         }
 
         .icon {
@@ -115,7 +125,7 @@
         }
 
         .data {
-          font-size: 14px;
+          font-size: 12px;
         }
       }
     }
