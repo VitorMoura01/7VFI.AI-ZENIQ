@@ -38,6 +38,7 @@ const Modal: FC<Props> = ({ data, cancel }: Props) => {
     setPlay(true)
     setTimeout(() => {
       setPlay(false)
+      cancel()
     }, 1800)
   }
 
@@ -49,13 +50,23 @@ const Modal: FC<Props> = ({ data, cancel }: Props) => {
     }, 800)
   }
 
+  const getPrices = (type: string, price: number) => {
+    if(type == 'token0') {
+      setToken0(price)
+      setToken1(price/data.token0Price) 
+    }
+    else {
+      setToken1(price)
+      setToken0(price/data.token1Price)
+    }
+  }
   return (
     <div className={styles.modal}>
       {
-        loading && <Loading/>
+        loading && <Loading />
       }
       {
-        play && <Player src={success} autoplay={true} className={`player ${styles.success}`}/>
+        play && <Player src={success} autoplay={true} className={`player ${styles.success}`} />
       }
       <div className={styles.container}>
         <div className={styles.row}>
@@ -75,17 +86,17 @@ const Modal: FC<Props> = ({ data, cancel }: Props) => {
 
         <div className={styles.row}>
           <div className={styles.col}>
-            <input type="number" value={token0 > 0 && token0} onChange={(e) => setToken0(Number(e.target.value))} />
-            <p>Deposit of {data.token0.symbol}</p>
+            <input type="number" value={token1.toFixed(0)} onChange={(e) => getPrices('token1', Number(e.target.value))} />
+            <p>Deposit of {data.token1.symbol}</p>
           </div>
           <div className={styles.col}>
-            <input type="number" value={token1 > 0 && token1} onChange={(e) => setToken1(Number(e.target.value))} />
-            <p>Deposit of {data.token1.symbol}</p>
+            <input type="number" value={token0.toFixed(0)} onChange={(e) => getPrices('token0', Number(e.target.value))} />
+            <p>Deposit of {data.token0.symbol}</p>
           </div>
         </div>
 
         <div className={styles.buttons}>
-          <button className={styles.mint} onClick={() => mintPosition()}>Create Position</button>
+          <button className={styles.mint} disabled={token0 == 0 || token1 == 0} onClick={() => mintPosition()}>Create Position</button>
           <button className={styles.cancel} onClick={() => cancel()}>Cancelar</button>
         </div>
       </div>

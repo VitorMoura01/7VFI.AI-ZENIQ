@@ -1,4 +1,4 @@
-import { FC, useCallback, useEffect, useState } from "react"
+import { FC, useState } from "react"
 import styles from './styles.module.scss'
 // import PoolCard from "../../components/poolCard"
 // import { Pool } from "../../types"
@@ -12,11 +12,11 @@ import { useQuery } from "@apollo/react-hooks"
 import Modal from "../../components/modal"
 
 const Home: FC = () => {
-  const [pools, setPools] = useState<any>(null)
-  const [tokensAddress, setTokensAddress] = useState([
+  const tokensAddress = [
     "0x5b52bfb8062ce664d74bbcd4cd6dc7df53fd7233"
-  ])
+  ]
   const [openedModal, setOpenedModal] = useState<any>(null)
+
 
   // const getPools = async () => {
     
@@ -36,8 +36,6 @@ const Home: FC = () => {
   // getPools()
 
   const {
-    loading: loadingPool,
-    error: loadingError,
     data: poolData,
   } = useQuery(uniswapService.getQuery(tokensAddress))
 

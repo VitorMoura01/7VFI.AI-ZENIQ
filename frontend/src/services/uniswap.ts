@@ -3,7 +3,7 @@ import { gql } from "@apollo/client";
 const uniswapService = {
   getQuery: (addresses: string[]) => {
 
-    // addresses.map((address: string) => {
+    console.log(addresses)
     const query = gql`
       {
         token(id: "0x5b52bfb8062ce664d74bbcd4cd6dc7df53fd7233") {
